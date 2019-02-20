@@ -1342,7 +1342,6 @@ err:
 	return ret;
 }
 
-#if 0
 static void si2183_spi_read(struct dvb_frontend *fe, struct ecp3_info *ecp3inf)
 {
 	struct i2c_client *client = fe->demodulator_priv;
@@ -1362,7 +1361,6 @@ static void si2183_spi_write(struct dvb_frontend *fe,struct ecp3_info *ecp3inf)
 	dev->write_properties(client->adapter,ecp3inf->reg, ecp3inf->data);
 	return ;
 }
-#endif
 
 static const struct dvb_frontend_ops si2183_ops = {
 	.delsys = {SYS_DVBT, SYS_DVBT2,
@@ -1419,10 +1417,8 @@ static const struct dvb_frontend_ops si2183_ops = {
 	.i2c_gate_ctrl			= i2c_gate_ctrl,
 #endif
 
-#if 0
 	.spi_read			= si2183_spi_read,
 	.spi_write			= si2183_spi_write,
-#endif
 
 };
 
