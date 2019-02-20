@@ -1132,7 +1132,7 @@ static void hdpvr_device_release(struct video_device *vdev)
 	v4l2_ctrl_handler_free(&dev->hdl);
 
 	/* deregister I2C adapter */
-#if IS_ENABLED(CONFIG_I2C)
+#if IS_ENABLED(CONFIG_I2C) || IS_ENABLED(CPTCFG_I2C)
 	mutex_lock(&dev->i2c_mutex);
 	i2c_del_adapter(&dev->i2c_adapter);
 	mutex_unlock(&dev->i2c_mutex);

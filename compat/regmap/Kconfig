@@ -17,6 +17,7 @@ config I2C
 	select I2C_MUX
 	select I2C_CHARDEV
 	select I2C_COMPAT
+	select I2C_BOARDINFO
 	select I2C_HELPER_AUTO
 
 config I2C_MUX
@@ -28,6 +29,9 @@ config I2C_COMPAT
 config I2C_CHARDEV
 	default y
 	tristate
+
+config I2C_BOARDINFO
+	bool
 
 config I2C_HELPER_AUTO
 	bool

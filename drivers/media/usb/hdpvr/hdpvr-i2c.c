@@ -13,7 +13,7 @@
  *
  */
 
-#if IS_ENABLED(CONFIG_I2C)
+#if IS_ENABLED(CONFIG_I2C) || IS_ENABLED(CPTCFG_I2C)
 
 #include <linux/i2c.h>
 #include <linux/slab.h>

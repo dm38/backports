@@ -52,7 +52,8 @@ void backport_dependency_symbol(void)
 EXPORT_SYMBOL_GPL(backport_dependency_symbol);
 
 extern int clk_disable_unused(void);
-#ifndef CPTCFG_REGMAP_I2C
+/*#ifndef CPTCFG_REGMAP_I2C*/
+#if 1
 extern int i2c_init(void);
 extern void i2c_exit(void);
 extern int i2c_dev_init(void);

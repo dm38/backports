@@ -107,7 +107,7 @@ EXPORT_SYMBOL(v4l2_ctrl_query_fill);
 
 /* I2C Helper functions */
 
-#if IS_ENABLED(CONFIG_I2C)
+#if IS_ENABLED(CONFIG_I2C) || IS_ENABLED(CPTCFG_I2C)
 
 void v4l2_i2c_subdev_init(struct v4l2_subdev *sd, struct i2c_client *client,
 		const struct v4l2_subdev_ops *ops)

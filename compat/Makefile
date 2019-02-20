@@ -28,7 +28,7 @@ endif
 compat-$(CPTCFG_KERNEL_3_9) += clk/clk-devres.o clk/clkdev.o clk/clk.o clk/clk-divider.o
 compat-$(CPTCFG_KERNEL_3_9) += clk/clk-fixed-factor.o clk/clk-fixed-rate.o clk/clk-gate.o clk/clk-mux.o
 ifneq ($(CPTCFG_REGMAP_I2C),)
-ifeq ($(CPTCFG_I2C_BOARDINFO),)
+ifneq ($(CPTCFG_I2C_BOARDINFO),)
 compat-$(CPTCFG_KERNEL_3_9) += i2c/i2c-boardinfo.o
 endif
 compat-$(CPTCFG_KERNEL_3_9) += i2c/i2c-core.o i2c/i2c-dev.o i2c/i2c-mux.o
